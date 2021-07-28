@@ -29,7 +29,7 @@ def qr_popup():
     title = ttk.Label(top, text="QR-Code", background = '#3d3d3d', foreground = 'white', font=("Helvetica", 26))
     title.pack(padx = 30, pady = 30)
 
-    src = "D:\Internships\TopTrove\Project\Files\Pics\QR_Data.png"
+    src = "D:\Internships\TopTrove\Project\Files\QR_Data.png"
     img = Image.open(src)
     r_img = img.resize((500, 500))
     img = ImageTk.PhotoImage(r_img)
@@ -43,7 +43,7 @@ def qr_popup():
 def qr_code(str):
     img = qrcode.make(str)
     type(img)  # qrcode.image.pil.PilImage
-    img.save("D:\Internships\TopTrove\Project\Files\Pics\QR_Data.png")
+    img.save("D:\Internships\TopTrove\Project\Files\QR_Data.png")
     qr_popup()
 
 def confirm():
@@ -89,7 +89,7 @@ center_y = int(screen_height/2 - window_height / 2)
 
 # set the position of the window to the center of the screen
 form.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
-form.iconbitmap('D:\Internships\TopTrove\Project\Files\Pics\R_logo.ico')
+form.iconbitmap('D:\Internships\TopTrove\Project\Files\R_logo.ico')
 
 # configure the grid
 form.columnconfigure(0, weight=1)
