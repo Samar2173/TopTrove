@@ -17,7 +17,7 @@ class Student():
 
     def csvWrite(self):
         infoList = [ self.id, self.name, self.institution, self.stream, self.event, self.phone]
-        path = 'D:\Internships\TopTrove\Project\Files\student_info.csv'
+        path = r'Files\student_info.csv'
         with open(path, 'a', newline = '') as csv_file:
             writer = csv.writer(csv_file)
 
@@ -34,7 +34,7 @@ class Student():
             return "Data Added Successfully!!!"
 
     def csvRead(self, id):
-        path = 'D:\Internships\TopTrove\Project\Files\student_info.csv'
+        path = r'Files\student_info.csv'
         df = pd.read_csv(path)
         checkList = list(df['Student ID'])
         if id in checkList:
